@@ -14,4 +14,6 @@ nano quickNoteTemp
 
 gpg -e -a -u "$1" -r "$2" quickNoteTemp && rm quickNoteTemp
 
+mv quickNoteTemp.asc "$1_to_$2_`date`.asc"
+
 
