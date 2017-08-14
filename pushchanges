@@ -1,0 +1,11 @@
+#!/bin/bash
+
+git add -A
+
+echo "Enter a commit message in quotes: "
+read usrIn
+
+git commit -m "$usrIn"
+
+git push -u origin master
+

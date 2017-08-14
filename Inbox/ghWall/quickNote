@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+	echo "quickNote requires 2 input arguments"
+	echo ""
+	echo "Usage:"
+	echo "\tquickNote senderEmail recieverEmail"
+	echo ""
+fi
+
+
+nano quickNoteTemp
+
+gpg -e -a -u "$1" -r "$2" quickNoteTemp && rm quickNoteTemp
+
+
